@@ -36,36 +36,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 <body>
 	<!--header-->
-<div class="header">
-  <nav class="navbar navbar-default">
-				<div class="container">
-				<div class="navbar-header navbar-left">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<div class="w3_navigation_pos">
-					  <h1><a href="index.html">Kdemy</a></h1>
-					</div>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-					<nav class="link-effect-2" id="link-effect-2">
-						<ul class="nav navbar-nav">
-						  <li><a href="index.html">Main</a></li>
-							<li><a href="About_Us.html">About Us</a></li>
-							<li><a href="Services.html">Facilities</a></li>
-						  <li class="active"><a href="Gallery.html">Photos</a></li>
-							<li><a href="Admission.html">Admission</a></li>
-							<li><a href="Contact_Us.html">Contact Us</a></li>
-						</ul>
-					</nav>
-				</div>
-				</div>
-	</nav>
-  </div>
+<?php 
+
+include("header.html");
+
+?>
 		<!--//header-->
 
 <!-- gallery -->
@@ -178,46 +153,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</script>
 
 	<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-grids-all">
-			<div class="footer-w3-grid-top">
-				<div class="col-md-4 w3layouts_footer_grid">
-					<h3>Contact Us :</h3>
-						<ul>
-							<li><i class="glyphicon glyphicon-send"></i> Mega BangNa, <span> Bangkok, Thailand. </span></li>
-							<li><i class="glyphicon glyphicon-phone"></i> +66 2 322 3333 <span> +66 3 111 1222 </span></li>
-							<li><i class="glyphicon glyphicon-envelope"></i> <a href="mailto:contact@kdemy.com"> contact@kdemy.com</a></li>
-						</ul>
+<?php 
 
-				</div>
-			</div>
-				<div class="col-md-8 w3layouts_footer_grid">
-					<ul class="w3l_footer_nav">
-						<li><a href="index.html">Main</a></li>
-						<li><a href="About_Us.html">About Us</a></li>
-						<li><a href="Services.html">Facilities</a></li>
-						<li><a href="Gallery.html">Photos</a></li>
-						<li><a href="Admission.html">Admission</a></li>
-						<li><a href="Contact_Us.html">Contact Us</a></li>
-					</ul>
-					<div class="col-md-6 w3-footer-icons">
-					<h3>Leave Us Email</h3>
-					<p><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span><a href="mailto:info@kdemy.com"> info@kdemy.com</a></p>
-					</div>
-					<div class="col-md-6 w3-footer-icons">
-					<h3>Call Us Now</h3>
-					<i class="fa fa-phone" aria-hidden="true"></i><span>+66 1 234 5678</span>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="footer-bottom-agile">
-					<p>© 2018 Kdemy . All rights reserved | </p>
-				</div>
+include("footer.html");
 
-		</div>
-	</div>
+?>
 	<!-- //footer -->
 	<!-- start-smooth-scrolling -->
 	<script type="text/javascript" src="js/move-top.js"></script>
