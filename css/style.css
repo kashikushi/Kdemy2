@@ -506,6 +506,7 @@ h3.title span:before {
 }
 .services{
 	background-color: #212121;
+	margin-top: 50px;
 }
 
 .w3-services-head h3,.w3-about-agile-head h3,.w3-agile-faculty-head h3,.w3-agile-contact-head h3,.w3-agile-heading h3,.agileits_w3layouts_head h3,.w3-appoint-head h3,h3.w3-about-title{
@@ -518,7 +519,8 @@ h3.title span:before {
 	letter-spacing:2px;
 }
 .w3-services-head h3 {
-    color: #FFF;
+	color: #FFF;
+	margin-top: 100px;
 }
 .agile-abt-grid-1 h3 {
     border: 2px solid #0183c1;
@@ -1469,7 +1471,7 @@ ul.w3l_footer_nav li a {
     top: 7px;
      }
 	 .w3_navigation_pos {
-    left: 29%;
+	left: auto;
 	}
 	nav.navbar.navbar-default {
     padding: 2.5em 0 0 0;
