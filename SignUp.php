@@ -28,7 +28,8 @@ body{
 p{
 	font-size:12px;
 	text-decoration: none;
-	color:#ffffff;
+	color:#606060;
+	margin: 10px auto 200ox auto;
 }
 	
 h1{
@@ -40,7 +41,7 @@ h1{
 	background: white;
 	width: 300px;
 	border-radius: 6px;
-	margin: 0 auto 0 auto;
+	margin: 200px auto 0 auto;
 	padding: 0px 0px 70px 0px;
 	border: #2980b9 4px solid;
 	position: relative;
@@ -108,20 +109,38 @@ h1{
 
 </head>
 <body>
-<div class="topbar">
-	
-</div>
-<form method="post" action="index.php">
+
+<!--header-->
+<?php 
+
+include("header.html");
+
+?>
+		<!--//header-->
+
+
+<form method="post" action="">
 <div class="box">
 <h1>Sign Up</h1>
 <input type="email" name="email" placeholder="Email address" class="email" />
-<input type="password" name="pass" placeholder="password" class="email" />
+<input type="password" name="pass" placeholder="Password" class="email" />
 
 
-<a href="#"><div class="btn">Sign In</div></a>
-<a href="#"><div class="btn2">Sign Up</div></a>
+<a href="SignUp.php"><div class="btn">Sign In</div></a>
+<a href="SignUp.php"><div class="btn2">Sign Up</div></a>
 </div>
 </form>
 <p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
+<div style="height: 100px">
+	
+</div>
+
+<!-- footer -->
+<?php 
+
+include("footer.html");
+
+?>
+			<!-- //footer -->
 </body>
 </html>

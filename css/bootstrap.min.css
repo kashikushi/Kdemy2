@@ -1373,7 +1373,7 @@ a.text-danger:hover {
 }
 .bg-primary {
   color: #fff;
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: #5F5F5F;
 }
 a.bg-primary:hover {
   background-color: #286090;
