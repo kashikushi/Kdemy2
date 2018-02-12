@@ -7,7 +7,7 @@
 	
 body{
 	font-family: 'Open Sans', sans-serif;
-	background: #f9f9fa;
+	background: #5899ab;
 	margin: 0 auto 0 auto;
 	width: 100%;
 	text-align: center;
