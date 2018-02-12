@@ -62,7 +62,7 @@ img {
     margin-right: 0;
 }
 .w3_navigation_pos {
-      position: absolute;
+    position: absolute;
     top: 26px;
     left: 35%;
     z-index: 1;
@@ -76,6 +76,7 @@ img {
 	text-decoration: none;
 	display: block;
 	text-transform: capitalize;
+	text-align: right;
 }
 .w3_navigation_pos h1 {
     font-size: 3em;
