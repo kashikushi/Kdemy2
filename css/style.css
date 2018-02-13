@@ -32,7 +32,7 @@ img {
 	position:relative;
 }
 .navbar-nav {
-    float: none;
+	float: none;
 }
 .navbar-collapse {
     padding: 0;
@@ -1289,8 +1289,9 @@ ul.w3l_footer_nav li a {
     margin-right: 22.1em !important;
 	}
 	.navbar-nav {
-    float: none;
-    margin: 2em 0;
+	float: none;
+	margin: 2em 0;
+	text-align: center;
 	}
 	nav.navbar.navbar-default {
     padding: 2.5em 0 0 0;
