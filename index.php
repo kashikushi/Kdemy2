@@ -37,7 +37,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <body>
 <?php 
 
-include("header.html");
+include("header2.html");
 
 ?>
 
