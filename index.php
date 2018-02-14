@@ -33,11 +33,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 
 <!-- //js -->
+
+
 </head>
 <body>
 <?php 
 
-include("header2.html");
+include("header.html");
 
 ?>
 
