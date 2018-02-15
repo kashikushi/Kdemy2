@@ -52,8 +52,8 @@ h1{
 	background: white;
 	width: 400px;
 	border-radius: 5px;
-	margin: 20px auto 20px auto;
-	padding: 20px 0px 70px 0px;
+	margin: 20px auto 60px auto;
+	padding: 20px 0px 50px 0px;
 	border: rgba(95,95,95,0.50) 2px solid;
 	position: relative;
 	  box-shadow:10px 10px 30px -20px grey; 
@@ -111,7 +111,7 @@ include("header.html");
 ?>
 		<!--//header-->
 <div class="logo">
-<a href="index.php"><b><strong>K</strong>demy</a> <br>
+<a href="index.php"><strong>K</strong>demy</a>
 </div>
 <div class="box">
 <div class="msg">Sign up for a free account</div>

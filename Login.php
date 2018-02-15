@@ -25,12 +25,19 @@ body{
 /*topbar ends	
 */	
 	
+	.logo {
+		margin-top: 150px;
+		font-size: 40px;
+	}
 p{
 	font-size:12px;
 	text-decoration: none;
 	color:#606060;
-	margin: 10px auto 200ox auto;
+	margin: 20px auto 200ox auto;
 }
+	.forget {
+		margin: 20px 0 0 0;
+	}
 	
 h1{
 	font-size:1.5em;
@@ -42,11 +49,11 @@ h1{
 	background: white;
 	width: 400px;
 	border-radius: 5px;
-	margin: 200px auto 10px auto;
-	padding: 50px 0px 70px 0px;
+	margin: 20px auto 60px auto;
+	padding: 50px 0px 50px 0px;
 	border: rgba(95,95,95,0.50) 2px solid;
 	position: relative;
-	  box-shadow:10px 10px 30px -20px grey; 
+	box-shadow:10px 10px 30px -20px grey; 
 	}
 	
 .email{
@@ -61,14 +68,6 @@ h1{
 	border-radius:4px;
 }
 
-.password{
-	border-radius:4px;
-	background:#ecf0f1;
-	border: #ccc 1px solid;
-	padding: 12px;
-	width:250px;
-	font-size:1em;
- }
 .btn{
 	width:80%;
 	padding: 20px;
@@ -116,21 +115,20 @@ include("header.html");
 ?>
 		<!--//header-->
 
-
+<div class="logo">
+<a href="index.php"><strong>K</strong>demy</a>
+</div>
 <form method="post" action="">
 <div class="box">
-<h1><strong>K</strong>demy Login</h1>
+<h1>Login</h1>
 <input type="email" name="email" placeholder="Email address" class="email" />
 <input type="password" name="pass" placeholder="Password" class="email" />
+<button class="btn btn-success"><a href="Login.php"></a>Login</button>
+<div class="forget"><p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p></div>
+<button class="btn btn-danger"><a href="Sign_Up.php"></a> Sign up for free account </button>
 
-
-<a href="Login.php"><div class="btn btn-primary">Login</div></a>
 </div>
 </form>
-<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
-<div style="height: 100px">
-	
-</div>
 
 <!-- footer -->
 <?php 
