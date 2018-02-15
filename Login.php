@@ -68,7 +68,7 @@ h1{
 	border-radius:4px;
 }
 
-.btn{
+.btn {
 	width:80%;
 	padding: 20px;
 	color: white;
@@ -78,29 +78,38 @@ h1{
 	font-weight:800;
 	font-size:0.8em;
  }
-.btn:hover{
+.btn:hover {
 	background:#2CC06B;
  }
+
+.btn2:link, .btn2:visited {
+    background-color: #1E73C9;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.btn2:hover, .btn2:active {
+    background-color: blue;
+}
+
+	.btn3:link, .btn3:visited {
+    background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.btn3:hover, .btn3:active {
+    background-color: red;
+}
 	
-.btn2{
-	float:left;
-	background:#3498db;
-	width:125px; 
-	padding-top:5px;
-	padding-bottom:5px;
-	color: white;
-	border-radius:4px;
-	border: #2980b9 1px solid;
-	margin-top:20px;
-	margin-bottom:20px;
-	margin-left:10px;
-	font-weight:800;
-	font-size:0.8em;
- }
-	
-.btn2:hover{
-	background:#FF0004;
- }
 </style>
 
 
@@ -123,9 +132,11 @@ include("header.html");
 <h1>Login</h1>
 <input type="email" name="email" placeholder="Email address" class="email" />
 <input type="password" name="pass" placeholder="Password" class="email" />
-<button class="btn btn-success"><a href="Login.php"></a>Login</button>
+<a href="Login.php" class="btn2 btn btn-primary"> Login </a>
+
 <div class="forget"><p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p></div>
-<button class="btn btn-danger"><a href="Sign_Up.php"></a> Sign up for free account </button>
+<a href="Sign_Up.php" class="btn3 btn btn-info"> Sign up for free account </a>
+
 
 </div>
 </form>

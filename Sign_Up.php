@@ -96,6 +96,20 @@ h1{
 	.form-group{
 		margin: 20px;
 	}
+	
+	.btn3:link, .btn3:visited {
+    background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.btn3:hover, .btn3:active {
+    background-color: red;
+}
 
 </style>
 
@@ -124,7 +138,7 @@ include("header.html");
 <input type="checkbox" name="terms_of_service" id="terms" class="terms">
 <label for="terms">I've read and agree to the <a href="#">terms of service</a>.</label>
 </div>
-<button class="btn btn-danger">SIGN UP</button>
+<a href="#" class="btn3 btn btn-danger"> Sign Up </a>
 <div class="m-t-25 m-b--5 align-center form-group">
 <a href="Login.php" class="already">You already have a membership?</a>
 </div>
