@@ -24,6 +24,8 @@ body{
 	
 /*topbar ends	
 */	
+
+	
 	
 p{
 	font-size:12px;
@@ -37,13 +39,21 @@ h1{
 	color:#525252;
 	margin: 20px;
 }
+	.logo {
+		margin-top: 150px;
+		font-size: 40px;
+	}
+	.msg{
+		padding: 20px 0;
+		font-size: 20px;
+	}
 	
 .box{
 	background: white;
 	width: 400px;
 	border-radius: 5px;
-	margin: 200px auto 10px auto;
-	padding: 50px 0px 70px 0px;
+	margin: 20px auto 20px auto;
+	padding: 20px 0px 70px 0px;
 	border: rgba(95,95,95,0.50) 2px solid;
 	position: relative;
 	  box-shadow:10px 10px 30px -20px grey; 
@@ -75,33 +85,18 @@ h1{
 	color: white;
 	border-radius: 4px;
 	border: #27ae60 1px solid;
-	margin: 20px 10px;
+	margin: 20px 20px;
 	font-weight:800;
 	font-size:0.8em;
  }
+	
 .btn:hover{
 	background:#2CC06B;
  }
-	
-.btn2{
-	float:left;
-	background:#3498db;
-	width:125px; 
-	padding-top:5px;
-	padding-bottom:5px;
-	color: white;
-	border-radius:4px;
-	border: #2980b9 1px solid;
-	margin-top:20px;
-	margin-bottom:20px;
-	margin-left:10px;
-	font-weight:800;
-	font-size:0.8em;
- }
-	
-.btn2:hover{
-	background:#FF0004;
- }
+	.form-group{
+		margin: 20px;
+	}
+
 </style>
 
 
@@ -115,22 +110,27 @@ include("header.html");
 
 ?>
 		<!--//header-->
-
-
-<form method="post" action="">
+<div class="logo">
+<a href="index.php"><b><strong>K</strong>demy</a> <br>
+</div>
 <div class="box">
-<h1><strong>K</strong>demy Login</h1>
-<input type="email" name="email" placeholder="Email address" class="email" />
-<input type="password" name="pass" placeholder="Password" class="email" />
+<div class="msg">Sign up for a free account</div>
+<form method="post" action="#">
+<input type="email" class="email" name="email" placeholder="Email Address" required="" value="">
+<input type="password" class="email" name="password" minlength="6" placeholder="Password" required="">
+<input type="password" class="email" name="password_confirmation" minlength="6" placeholder="Confirm Password" required="">
 
-
-<a href="Login.php"><div class="btn btn-primary">Login</div></a>
+<div class="form-group">
+<input type="checkbox" name="terms_of_service" id="terms" class="terms">
+<label for="terms">I've read and agree to the <a href="#">terms of service</a>.</label>
+</div>
+<button class="btn btn-danger">SIGN UP</button>
+<div class="m-t-25 m-b--5 align-center form-group">
+<a href="Login.php" class="already">You already have a membership?</a>
 </div>
 </form>
-<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
-<div style="height: 100px">
-	
 </div>
+
 
 <!-- footer -->
 <?php 
