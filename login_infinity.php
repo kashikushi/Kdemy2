@@ -43,8 +43,8 @@ include("header.html");
 
 ?>
 
-<div class="login-box">
-<div class="logo">
+<div class="">
+<div>
 <a href="https://infinityfree.net/">Infinity<b>Free</b></a>
 <small>Free and Unlimited Web Hosting</small>
 </div>
