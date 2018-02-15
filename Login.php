@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sign Up</title>
+<title>Login</title>
 <style>
 	
 body{
@@ -35,26 +35,27 @@ p{
 h1{
 	font-size:1.5em;
 	color:#525252;
+	margin: 20px;
 }
 	
 .box{
 	background: white;
-	width: 300px;
-	border-radius: 6px;
-	margin: 200px auto 0 auto;
-	padding: 0px 0px 70px 0px;
-	border: #2980b9 4px solid;
+	width: 400px;
+	border-radius: 5px;
+	margin: 200px auto 10px auto;
+	padding: 50px 0px 70px 0px;
+	border: rgba(95,95,95,0.50) 2px solid;
 	position: relative;
- }
+	}
 	
 .email{
 	background:#ecf0f1;
 	border: #ccc 1px solid;
 	border-bottom: #ccc 2px solid;
-	padding: 8px;
-	width:250px;
+	padding: 12px;
+	width: 80%;
 	color:#AAAAAA;
-	margin-top:10px;
+	margin-top:20px;
 	font-size:1em;
 	border-radius:4px;
 }
@@ -63,22 +64,17 @@ h1{
 	border-radius:4px;
 	background:#ecf0f1;
 	border: #ccc 1px solid;
-	padding: 8px;
+	padding: 12px;
 	width:250px;
 	font-size:1em;
  }
 .btn{
-	background:#2ecc71;
-	width:125px;
-	padding-top:5px;
-	padding-bottom:5px;
-	color:white;
-	border-radius:4px;
+	width:80%;
+	padding: 20px;
+	color: white;
+	border-radius: 4px;
 	border: #27ae60 1px solid;
-	margin-top:20px;
-	margin-bottom:20px;
-	float:left;
-	margin-left:16px;
+	margin: 20px 10px;
 	font-weight:800;
 	font-size:0.8em;
  }
@@ -89,9 +85,10 @@ h1{
 .btn2{
 	float:left;
 	background:#3498db;
-	width:125px; padding-top:5px;
+	width:125px; 
+	padding-top:5px;
 	padding-bottom:5px;
-	color:white;
+	color: white;
 	border-radius:4px;
 	border: #2980b9 1px solid;
 	margin-top:20px;
@@ -121,13 +118,12 @@ include("header.html");
 
 <form method="post" action="">
 <div class="box">
-<h1>Sign Up</h1>
+<h1><strong>K</strong>demy Login</h1>
 <input type="email" name="email" placeholder="Email address" class="email" />
 <input type="password" name="pass" placeholder="Password" class="email" />
 
 
-<a href="SignUp.php"><div class="btn">Sign In</div></a>
-<a href="SignUp.php"><div class="btn2">Sign Up</div></a>
+<a href="SignUp.php"><div class="btn btn-primary">Login</div></a>
 </div>
 </form>
 <p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
