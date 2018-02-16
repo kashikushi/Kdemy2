@@ -42,6 +42,7 @@ include("header.html");
 
 ?>
 		<!--//header-->
+<div style="height: 100px"></div>
 
 <!--/contact -->
  <div class="bg-agile w3-admission" id="admission">

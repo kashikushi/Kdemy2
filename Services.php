@@ -41,6 +41,8 @@ include("header.html");
 
 ?>
 		<!--//header-->
+		<div style="height: 100px"></div>
+
 <!--/services -->
 <div class="services" id="services">
 		<div class="w3-services-head">

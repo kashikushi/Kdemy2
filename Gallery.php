@@ -42,6 +42,7 @@ include("header.html");
 
 ?>
 		<!--//header-->
+<div style="height: 100px"></div>
 
 <!-- gallery -->
 	<div class="gallery" id="gallery">

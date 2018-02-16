@@ -42,6 +42,7 @@ include("header.html");
 
 ?>
 		<!--//header-->
+<div style="height: 200px"></div>
 
 <!--/contact -->
 

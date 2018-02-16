@@ -511,12 +511,12 @@ h3.title span:before {
 
 .w3-services-head h3,.w3-about-agile-head h3,.w3-agile-faculty-head h3,.w3-agile-contact-head h3,.w3-agile-heading h3,.agileits_w3layouts_head h3,.w3-appoint-head h3,h3.w3-about-title{
 	font-size: 3em;
-    color: #337ab7;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    text-transform: capitalize;
-	margin-bottom:40px;
-	letter-spacing:2px;
+	color: #337ab7;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: 40px;
+	letter-spacing: 2px;
 }
 .w3-services-head h3 {
 	color: #FFF;

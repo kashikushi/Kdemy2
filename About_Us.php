@@ -42,7 +42,7 @@ include("header.html");
 
 ?>
 		<!--//header-->
-
+<div style="height: 100px"></div>
 <!--/about -->
 <div id="about" class="about all_pad w3ls">
 	<div class="container">
