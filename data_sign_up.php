@@ -1,26 +1,31 @@
+<?php
+$con=mysqli_connect("localhost","kashif","haris2011","dw_education");
+// Check connection
+define('USE_PCONNECT', 'false'); 
+define('STORE_SESSIONS', 'mysql');
+if (mysqli_connect_errno()) {
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+ }
 
-<?php	
-/*	db connection
-*/	
-	include("db_con.php"); 
 
-/*data from signup page
-*/	
-	if (isset($_POST['submit']))
-	{
-		extract($_POST);
-			$userEmail = $_REQUEST['email'];
-			$userPassword = $_REQUEST['password'];
+if(isset($_POST['submit']))
+ {
+ extract($_POST);
 
-			$query="INSERT INTO `test`(`user_id`, `email`, `password`) VALUES ('userEmail','userPassword'";
-	}
-	if ($con->query($query)) === TRUE) {
-		header("location:data_sign_up.php");			
-	}
-	else {
-		echo "Error: " .<iframe></iframe> $query . "<br>" . $con->error;
-	}
-	echo "<script> alert ('Recod has been submitted successfully.'); </script>";
-	
-	
-?>
+$email = $_REQUEST['fname'];
+$password = $_REQUEST['lname'
+
+
+$query="INSERT INTO `test`(`email`, `password`) VALUES ('$email','$password')";
+
+if ($con->query($query) === TRUE) {
+header("location:signup.html");
+
+ } else {
+echo "Error: " . $query . "<br>" . $con->error;
+}
+echo "<script> alert('Record Has been Recorded successfully.');</script>";
+/*$con->close();*/
+ }
+
+ ?>
