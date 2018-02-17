@@ -132,16 +132,22 @@ include("header.html");
 </div>
 <div class="box">
 <div class="msg">Sign up for a free account</div>
+
+<!--form start-->
+
 <form method="POST" action="data_sign_up.php">
 <input type="email" class="email" name="email" placeholder="Email Address" required="" value="">
 <input type="password" class="email" name="password" minlength="6" placeholder="Password" required="">
 <input type="password" class="email" name="password_confirmation" minlength="6" placeholder="Confirm Password" required="">
 
+<!--form ends-->
+
 <div class="form-group">
 <input type="checkbox" name="terms_of_service" id="terms" class="terms">
 <label for="terms">I've read and agree to the <a href="#">terms of service</a>.</label>
 </div>
-<a href="Login.php" class="btn3 btn btn-danger"> Sign Up </a>
+
+<a href="Login.php" class="btn3 btn btn-danger" name="submit"> Sign Up </a>
 <div class="m-t-25 m-b--5 align-center form-group">
 <a href="Login.php" class="already">You already have a membership?</a>
 </div>
