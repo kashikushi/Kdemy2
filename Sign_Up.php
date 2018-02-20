@@ -135,7 +135,7 @@ include("header.html");
 
 <!--form start-->
 
-<form method="POST" action="data_sign_up.php">
+<form action="data_sign_up.php" method="POST">
 <input type="email" class="email" name="email" placeholder="Email Address" required="" value="">
 <input type="password" class="email" name="password" minlength="6" placeholder="Password" required="">
 <input type="password" class="email" name="password_confirmation" minlength="6" placeholder="Confirm Password" required="">
@@ -146,8 +146,7 @@ include("header.html");
 <input type="checkbox" name="terms_of_service" id="terms" class="terms">
 <label for="terms">I've read and agree to the <a href="#">terms of service</a>.</label>
 </div>
-
-<a href="Login.php" class="btn3 btn btn-danger" name="submit"> Sign Up </a>
+<button type="submit" name="submit" class="btn3 btn btn-danger">Click to Sign Up</button>
 <div class="m-t-25 m-b--5 align-center form-group">
 <a href="Login.php" class="already">You already have a membership?</a>
 </div>
