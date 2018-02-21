@@ -13,12 +13,13 @@ if(isset($_POST['submit']))
  {
  extract($_POST);
 
-
 $username = $_REQUEST['uname'];
 $userpassword = $_REQUEST['password'];
 	 
-$query="SELECT * FROM `Sign_Up_Data_Table` WHERE `user_name` = '$username' and `password` ='$userpassword`";
-
+	 
+$query="SELECT * FROM `Sign_Up_Data_Table` WHERE `user_name` = '$username' and `password` ='$userpassword' ";
+    
+	 
 $result=mysqli_query($con,$query);
 while($row=mysqli_fetch_array($result)) 
 {
@@ -28,6 +29,6 @@ while($row=mysqli_fetch_array($result))
 		$name=$row['user_name'];
 }
 }
-echo($username);
+echo($row);
 echo "<a href='logout.php'> Logout  </a>";
  ?>
