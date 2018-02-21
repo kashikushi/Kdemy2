@@ -50,7 +50,7 @@ h1{
 	
 .box{
 	background: white;
-	width: 400px;
+	width: 450px;
 	border-radius: 5px;
 	margin: 20px auto 60px auto;
 	padding: 20px 0px 50px 0px;
@@ -110,6 +110,9 @@ h1{
 .btn3:hover, .btn3:active {
     background-color: red;
 }
+	#tbox {
+		height: 100px;
+	}
 
 </style>
 
@@ -136,9 +139,16 @@ include("header.html");
 <!--form start-->
 
 <form action="data_sign_up.php" method="POST">
+<input type="text" class="email" name="fname" placeholder="First Name" required="" value="">
+<input type="text" class="email" name="lname" placeholder="Last Name" required="" value="">
 <input type="email" class="email" name="email" placeholder="Email Address" required="" value="">
+<input type="text" class="email" name="uname" placeholder="User Name" required="" value="">
 <input type="password" class="email" name="password" minlength="6" placeholder="Password" required="">
-<input type="password" class="email" name="password_confirmation" minlength="6" placeholder="Confirm Password" required="">
+<input type="date" class="email" name="dob" placeholder="Date of Birth" required="">
+<input type="text" class="email" name="gen" placeholder="Gender" required="">
+<input type="tel" class="email" name="tel" placeholder="Telephone" required="">
+<input type="text" class="email" name="quali" placeholder="Qualification" required="">
+<textarea name="haddress" class="email" id="tbox" cols="30" rows="10" placeholder="Type your address here"></textarea>
 
 <!--form ends-->
 
