@@ -14,19 +14,20 @@ if(isset($_POST['submit']))
  extract($_POST);
 
 
-$useremail = $_REQUEST['email'];
+$username = $_REQUEST['uname'];
 $userpassword = $_REQUEST['password'];
 	 
-$query="SELECT * FROM `Sign_Up_Data_Table` WHERE `email` = '$useremail' and `password` ='$userpassword`";
+$query="SELECT * FROM `Sign_Up_Data_Table` WHERE `user_name` = '$username' and `password` ='$userpassword`";
 
 $result=mysqli_query($con,$query);
-while($row=mysqli_fetch_array($result)) {
+while($row=mysqli_fetch_array($result)) 
+{
 	//$_SESSION['auth']=true;
 	$_SESSION['ID'] =$row[0];
 		$admin_id=$_SESSION['ID'];
-		$name=$row['email'];
+		$name=$row['user_name'];
 }
 }
-echo($name);
-echo "<a href="logout.php"> Logout  </a>";
+echo($username);
+echo "<a href='logout.php'> Logout  </a>";
  ?>
