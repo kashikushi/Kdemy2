@@ -36,13 +36,38 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 <body>
 <!--header-->
-<?php 
-
-include("header.html");
-
-?>
+<div class="header">
+  <nav class="navbar navbar-default">
+				<div class="container">
+				<div class="navbar-header navbar-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="w3_navigation_pos">
+					  <h1><a href="index.html">Kdemy</a></h1>
+					</div>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-2" id="link-effect-2">
+						<ul class="nav navbar-nav">
+						  <li><a href="index.html">Main</a></li>
+							<li class="active"><a href="About_Us.html">About Us</a></li>
+							<li><a href="Services.html">Facilities</a></li>
+						  <li><a href="Gallery.html">Photos</a></li>
+							<li><a href="Admission.html">Admission</a></li>
+							<li><a href="Contact_Us.html">Contact Us</a></li>
+						</ul>
+					</nav>
+				</div>
+				</div>
+	</nav>
+  </div>
 		<!--//header-->
-<div style="height: 100px"></div>
+
 <!--/about -->
 <div id="about" class="about all_pad w3ls">
 	<div class="container">
@@ -51,24 +76,27 @@ include("header.html");
 			<div class="col-md-4 ser-grid wow flipInY" data-wow-duration="1.5s" data-wow-delay="0s">
 				<div class="con-left text-center">
 					<div class="spa-ico"><span><i class="fa fa-book" aria-hidden="true"></i></span></div>
-					<h5>VISION</h5>
-					<p>A society that uses all of its resources effectively to provide an equal opportunity for all children and youth to learn, develop, and become contributing citizens of our democracy.</p>
+					<h5>Voluptatem </h5>
+					<p>Neque porro quisquam est, qui dolorem ipsum
+					quia dolor sit amet non consequat augue iaculis proin malesuada </p>
 
 				</div>
 			</div>
 			<div class="col-md-4 ser-grid wow flipInY" data-wow-duration="1.5s" data-wow-delay="0s">
 				<div class="con-left text-center">
 					<div class="spa-ico"><span><i class="fa fa-pencil" aria-hidden="true"></i></span></div>
-					<h5>MISSION</h5>
-					<p>To equip leaders to better prepare children and youth for college, careers, and citizenship.</p>
+					<h5>Doloremque</h5>
+					<p>Neque porro quisquam est, qui dolorem ipsum
+					quia dolor sit amet non consequat augue iaculis proin malesuada</p>
 
 				</div>
 			</div>
 			<div class="col-md-4 ser-grid wow flipInY" data-wow-duration="1.5s" data-wow-delay="0s">
 				<div class="con-left text-center">
 					<div class="spa-ico"><span><i class="fa fa-user" aria-hidden="true"></i></span></div>
-					<h5>ABOUT KDEMY</h5>
-					<p>or a half-century, the Institute for Educational Leadership has championed the need for leaders at all levels to shake off their institutional constraints and work across boundaries to address the needs of young people and their families. Bound by no constituency, KDEMY serves as a catalyst that helps policymakers, administrators, and practitioners at all levels to bridge bureaucratic silos and undo gridlock to improve outcomes for all young people and their families.</p>
+					<h5>Laudantium</h5>
+					<p>Neque porro quisquam est, qui dolorem ipsum
+					quia dolor sit amet non consequat augue iaculis proin malesuada</p>
 
 				</div>
 			</div>
@@ -83,11 +111,46 @@ include("header.html");
 
 
 <!-- footer -->
-<?php 
+<div class="footer">
+	<div class="container">
+		<div class="footer-grids-all">
+		<div class="footer-w3-grid-top">
+			<div class="col-md-4 w3layouts_footer_grid">
+				<h3>Contact Us :</h3>
+					<ul>
+						<li><i class="glyphicon glyphicon-send"></i> Mega BangNa, <span> Bangkok, Thailand. </span></li>
+						<li><i class="glyphicon glyphicon-phone"></i> +66 2 322 3333 <span> +66 3 111 1222 </span></li>
+						<li><i class="glyphicon glyphicon-envelope"></i> <a href="mailto:contact@kdemy.com"> contact@kdemy.com</a></li>
+					</ul>
 
-include("footer.html");
+			</div>
+		</div>
+			<div class="col-md-8 w3layouts_footer_grid">
+				<ul class="w3l_footer_nav">
+					<li><a href="index.html">Main</a></li>
+					<li><a href="About_Us.html">About Us</a></li>
+					<li><a href="Services.html">Facilities</a></li>
+					<li><a href="Gallery.html">Photos</a></li>
+					<li><a href="Admission.html">Admission</a></li>
+					<li><a href="Contact_Us.html">Contact Us</a></li>
+				</ul>
+				<div class="col-md-6 w3-footer-icons">
+				<h3>Leave Us Email</h3>
+				<p><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span><a href="mailto:info@kdemy.com"> info@kdemy.com</a></p>
+				</div>
+				<div class="col-md-6 w3-footer-icons">
+				<h3>Call Us Now</h3>
+				<i class="fa fa-phone" aria-hidden="true"></i><span>+66 1 234 5678</span>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="footer-bottom-agile">
+				<p>© 2018 Kdemy . All rights reserved | </p>
+			</div>
 
-?>
+	</div>
+</div>
 <!-- //footer -->
 	<!-- start-smooth-scrolling -->
 	<script type="text/javascript" src="js/move-top.js"></script>
