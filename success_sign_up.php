@@ -24,11 +24,16 @@ $result=mysqli_query($con,$query);
 while($row=mysqli_fetch_array($result)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['ID'] =$row[0];
+		$_SESSION['ID'] =$row['user_id'];
 		$admin_id=$_SESSION['ID'];
 		$name=$row['user_name'];
 	}
 }
-echo($row);
+echo($name);
 echo "<a href='logout.php'> Logout  </a>";
  ?>
+ 
+    
+	
+
+
