@@ -1,4 +1,41 @@
+<?php
 
+$con1=mysqli_connect("localhost","root","","dw_education");
+// Check connection
+define('USE_PCONNECT', 'false'); 
+define('STORE_SESSIONS', 'mysql');
+if (mysqli_connect_errno()) {
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+ }
+$sql="SELECT * FROM `slider` order by `slider_id` ASC";
+
+
+
+ 
+$res=mysqli_query($con1,$sql);
+while($row1=mysqli_fetch_array($res)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title'] =$row1['Title'];
+		$_SESSION['desc'] =$row1['Description'];
+	}
+
+
+$sql1="SELECT * FROM `overview` ";
+
+
+
+ 
+$res1=mysqli_query($con1,$sql1);
+while($row2=mysqli_fetch_array($res1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['img'] =$row2['image'];
+		$_SESSION['imgdesc'] =$row2['Description'];
+	}
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,8 +95,8 @@ include("header.html");
 			<div class="item active">
 				<div class="container">
 					<div class="carousel-caption">
-						<h2>Bringing education to life</h2>
-						<p>In this digital age, young people need to be highly skilled in the use of ICT. While schools already employ these technologies in learning, there is a need to increase their effectiveness significantly over the next decade.</p>
+						<h2><?php echo $_SESSION['title'] ?></h2>
+						<p><?php echo $_SESSION['desc'] ?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Read more</button>
 					</div>
 				</div>
@@ -117,11 +154,14 @@ include("header.html");
 					<span class="close" data-dismiss="modal" >&times;</span>
 					<h3>Kdemy</h3>
 				</div>
+				
+				
+				
 				<div class="col-md-6 modal-img">
-					<img src="images2/banner8.jpg" class="img-responsive" alt="w3layouts" title="w3layouts">
+					<img src="<?php echo $_SESSION['img'] ?>" class="img-responsive" alt="w3layouts" title="w3layouts">
 				</div>
 				<div class="col-md-6 modal-text">
-					<p class="banner-p1">Kdemy brings broad experience and deep content knowledge to every aspect of our work. Effective planning, efficiency, creativity, and style are infused into each of our projects — always with an eye toward achieving results.</p>
+					<p class="banner-p1"><?php echo $_SESSION['imgdesc'] ?></p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
