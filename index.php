@@ -10,22 +10,46 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
 $sql="SELECT * FROM `slider` order by `slider_id` ASC";
 
-
-
  
-$res=mysqli_query($con,$sql);
-while($row1=mysqli_fetch_array($res)) 
+$result1=mysqli_query($con,$sql);
+while($row1=mysqli_fetch_array($result1)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['title'] =$row1['Title'];
-		$_SESSION['desc'] =$row1['Description'];
+		$_SESSION['title1'] =$row1['Title'];
+		$_SESSION['desc1'] =$row1['Description'];
+	}
+$result2=mysqli_query($con,$sql);
+while($row2=mysqli_fetch_array($result2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title2'] =$row2['Title'];
+		$_SESSION['desc2'] =$row2['Description'];
+	}
+$result3=mysqli_query($con,$sql);
+while($row3=mysqli_fetch_array($result3)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title3'] =$row3['Title'];
+		$_SESSION['desc3'] =$row3['Description'];
+	}
+$result4=mysqli_query($con,$sql);
+while($row4=mysqli_fetch_array($result4)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title4'] =$row4['Title'];
+		$_SESSION['desc4'] =$row4['Description'];
+	}
+$result5=mysqli_query($con,$sql);
+while($row5=mysqli_fetch_array($result5)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title5'] =$row5['Title'];
+		$_SESSION['desc5'] =$row5['Description'];
 	}
 
 
+
 $sql1="SELECT * FROM `overview` ";
-
-
-
  
 $res1=mysqli_query($con,$sql1);
 while($row2=mysqli_fetch_array($res1)) 
@@ -96,8 +120,8 @@ include("header.html");
 			<div class="item active">
 				<div class="container">
 					<div class="carousel-caption">
-						<h2><?php echo $_SESSION['title'] ?></h2>
-						<p><?php echo $_SESSION['desc'] ?></p>
+						<h2><?php echo $_SESSION['title1'] ?></h2>
+						<p><?php echo $_SESSION['desc1'] ?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Read more</button>
 					</div>
 				</div>
@@ -105,8 +129,8 @@ include("header.html");
 			<div class="item item2">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>How to deal with exam stress</h3>
-						<p>Exam season can bring on levels of stress and burnout that can hinder your studies. Here are some handy tips on how to manage your anxiety.</p>
+						<h3><?php echo $_SESSION['title2']?></h3>
+						<p><?php echo $_SESSION['desc2']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
@@ -114,8 +138,8 @@ include("header.html");
 			<div class="item item3">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>Teacher working with students</h3>
-						<p>Special education teachers design and deliver lessons geared towards the individual needs and capabilities of the students under their supervision.</p>
+						<h3><?php echo $_SESSION['title3']?></h3>
+						<p><?php echo $_SESSION['desc3']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
@@ -123,8 +147,8 @@ include("header.html");
 			<div class="item item4">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>Learn and Grow</h3>
-						<p>If you want your child to build a rocket and see how high it flies, construct a robot out of Legos, make a fake fossil, bake their own granola and a thousand other things, then Learn and Grow is for you!</p>
+						<h3><?php echo $_SESSION['title4']?></h3>
+						<p><?php echo $_SESSION['desc4']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
@@ -132,8 +156,8 @@ include("header.html");
 			<div class="item item5">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>INSPIRE. ENGAGE. TRANSFORM.</h3>
-						<p>Kdemy is a social impact consulting firm offering comprehensive strategy and communications consultation services.</p>
+						<h3><?php echo $_SESSION['title5']?></h3>
+						<p><?php echo $_SESSION['desc5']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
