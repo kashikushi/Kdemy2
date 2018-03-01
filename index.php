@@ -1,18 +1,19 @@
 <?php
 
-$con1=mysqli_connect("localhost","root","","dw_education");
+$con=mysqli_connect("localhost","root","","dw_education");
 // Check connection
 define('USE_PCONNECT', 'false'); 
 define('STORE_SESSIONS', 'mysql');
 if (mysqli_connect_errno()) {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
  }
+
 $sql="SELECT * FROM `slider` order by `slider_id` ASC";
 
 
 
  
-$res=mysqli_query($con1,$sql);
+$res=mysqli_query($con,$sql);
 while($row1=mysqli_fetch_array($res)) 
 	{
 		//$_SESSION['auth']=true;
@@ -26,7 +27,7 @@ $sql1="SELECT * FROM `overview` ";
 
 
  
-$res1=mysqli_query($con1,$sql1);
+$res1=mysqli_query($con,$sql1);
 while($row2=mysqli_fetch_array($res1)) 
 	{
 		//$_SESSION['auth']=true;
