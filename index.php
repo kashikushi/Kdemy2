@@ -1,4 +1,106 @@
+<?php
 
+$con=mysqli_connect("localhost","root","","dw_education");
+// Check connection
+define('USE_PCONNECT', 'false'); 
+define('STORE_SESSIONS', 'mysql');
+if (mysqli_connect_errno()) {
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+ }
+
+$sql="SELECT * FROM `slider` order by `slider_id` ASC";
+
+ 
+$result1=mysqli_query($con,$sql);
+while($row1=mysqli_fetch_array($result1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title1'] =$row1['Title'];
+		$_SESSION['desc1'] =$row1['Description'];
+	}
+$result2=mysqli_query($con,$sql);
+while($row2=mysqli_fetch_array($result2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title2'] =$row2['Title'];
+		$_SESSION['desc2'] =$row2['Description'];
+	}
+$result3=mysqli_query($con,$sql);
+while($row3=mysqli_fetch_array($result3)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title3'] =$row3['Title'];
+		$_SESSION['desc3'] =$row3['Description'];
+	}
+$result4=mysqli_query($con,$sql);
+while($row4=mysqli_fetch_array($result4)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title4'] =$row4['Title'];
+		$_SESSION['desc4'] =$row4['Description'];
+	}
+$result5=mysqli_query($con,$sql);
+while($row5=mysqli_fetch_array($result5)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title5'] =$row5['Title'];
+		$_SESSION['desc5'] =$row5['Description'];
+	}
+
+
+
+$sql1="SELECT * FROM `overview` ";
+ 
+$res1=mysqli_query($con,$sql1);
+while($row2=mysqli_fetch_array($res1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['img'] =$row2['image'];
+		$_SESSION['imgdesc'] =$row2['Description'];
+	}
+
+
+$sql2="SELECT * FROM `Faculty_Experience` order by `faculty_id` ASC ";
+
+$result_fac1=mysqli_query($con,$sql2);
+while($row_1=mysqli_fetch_array($result_fac1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title_fac1'] =$row_1['fac_title'];
+		$_SESSION['li_1_fac'] =$row_1['fac_li_1'];
+		$_SESSION['li_2_fac'] =$row_1['fac_li_2'];
+		$_SESSION['li_3_fac'] =$row_1['fac_li_3'];
+		$_SESSION['li_4_fac'] =$row_1['fac_li_4'];
+		$_SESSION['li_5_fac'] =$row_1['fac_li_5'];
+	}
+
+$result_fac2=mysqli_query($con,$sql2);
+while($row_1=mysqli_fetch_array($result_fac2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title_fac2'] =$row_1['fac_title'];
+		$_SESSION['li_6_fac'] =$row_1['fac_li_1'];
+		$_SESSION['li_7_fac'] =$row_1['fac_li_2'];
+		$_SESSION['li_8_fac'] =$row_1['fac_li_3'];
+		$_SESSION['li_9_fac'] =$row_1['fac_li_4'];
+		$_SESSION['li_10_fac'] =$row_1['fac_li_5'];
+	}
+
+
+$result_t1=mysqli_query($con,$sql3);
+while($row_t1=mysqli_fetch_array($result_t1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title_fac2'] =$row_1['fac_title'];
+		$_SESSION['li_6_fac'] =$row_1['fac_li_1'];
+		$_SESSION['li_7_fac'] =$row_1['fac_li_2'];
+		$_SESSION['li_8_fac'] =$row_1['fac_li_3'];
+		$_SESSION['li_9_fac'] =$row_1['fac_li_4'];
+		$_SESSION['li_10_fac'] =$row_1['fac_li_5'];
+	}
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,8 +160,8 @@ include("header.html");
 			<div class="item active">
 				<div class="container">
 					<div class="carousel-caption">
-						<h2>Bringing education to life</h2>
-						<p>In this digital age, young people need to be highly skilled in the use of ICT. While schools already employ these technologies in learning, there is a need to increase their effectiveness significantly over the next decade.</p>
+						<h2><?php echo $_SESSION['title1'] ?></h2>
+						<p><?php echo $_SESSION['desc1'] ?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Read more</button>
 					</div>
 				</div>
@@ -67,8 +169,8 @@ include("header.html");
 			<div class="item item2">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>How to deal with exam stress</h3>
-						<p>Exam season can bring on levels of stress and burnout that can hinder your studies. Here are some handy tips on how to manage your anxiety.</p>
+						<h3><?php echo $_SESSION['title2']?></h3>
+						<p><?php echo $_SESSION['desc2']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
@@ -76,8 +178,8 @@ include("header.html");
 			<div class="item item3">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>Teacher working with students</h3>
-						<p>Special education teachers design and deliver lessons geared towards the individual needs and capabilities of the students under their supervision.</p>
+						<h3><?php echo $_SESSION['title3']?></h3>
+						<p><?php echo $_SESSION['desc3']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
@@ -85,8 +187,8 @@ include("header.html");
 			<div class="item item4">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>Learn and Grow</h3>
-						<p>If you want your child to build a rocket and see how high it flies, construct a robot out of Legos, make a fake fossil, bake their own granola and a thousand other things, then Learn and Grow is for you!</p>
+						<h3><?php echo $_SESSION['title4']?></h3>
+						<p><?php echo $_SESSION['desc4']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
@@ -94,8 +196,8 @@ include("header.html");
 			<div class="item item5">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>INSPIRE. ENGAGE. TRANSFORM.</h3>
-						<p>Kdemy is a social impact consulting firm offering comprehensive strategy and communications consultation services.</p>
+						<h3><?php echo $_SESSION['title5']?></h3>
+						<p><?php echo $_SESSION['desc5']?></p>
 						<button class="btn btn-primary" data-target="#myModal" data-toggle="modal">Now Open</button>
 					</div>
 				</div>
@@ -117,11 +219,14 @@ include("header.html");
 					<span class="close" data-dismiss="modal" >&times;</span>
 					<h3>Kdemy</h3>
 				</div>
+				
+				
+				
 				<div class="col-md-6 modal-img">
-					<img src="images2/banner8.jpg" class="img-responsive" alt="w3layouts" title="w3layouts">
+					<img src="<?php echo $_SESSION['img'] ?>" class="img-responsive" alt="w3layouts" title="w3layouts">
 				</div>
 				<div class="col-md-6 modal-text">
-					<p class="banner-p1">Kdemy brings broad experience and deep content knowledge to every aspect of our work. Effective planning, efficiency, creativity, and style are infused into each of our projects — always with an eye toward achieving results.</p>
+					<p class="banner-p1"><?php echo $_SESSION['imgdesc'] ?></p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -147,13 +252,13 @@ include("header.html");
 					<div class="col-md-3 w3-faculty-img1">
 					</div>
 					<div class="col-md-3 w3-faculty-data">
-						<h3>Faculty Experience</h3>
+						<h3><?php echo $_SESSION['title_fac1'] ?></h3>
 						 <ul>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Quality improvement</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Service effectiveness</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Vocational education</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Training efficiency</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Consultation services</li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_1_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_2_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_3_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_4_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_5_fac'] ?></li>
 						 </ul>
 					</div>
 					<div class="col-md-3 w3-faculty-ex-years">
@@ -174,13 +279,13 @@ include("header.html");
 						<p>more than 20 years of experience </p>
 				</div>
 				<div class="col-md-3 w3-faculty-data">
-						<h3>Female Faculty</h3>
+						<h3><?php echo $_SESSION['title_fac2']?></h3>
 						 <ul>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Someone who cares</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Not being alone</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Affirming one's worth</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Acts in best interest</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Feeling of connection</li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_6_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_7_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_8_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_9_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_10_fac'] ?></li>
 						 </ul>
 				</div>
 				<div class="col-md-3 w3-faculty-img4">
