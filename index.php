@@ -60,6 +60,46 @@ while($row2=mysqli_fetch_array($res1))
 	}
 
 
+$sql2="SELECT * FROM `Faculty_Experience` order by `faculty_id` ASC ";
+
+$result_fac1=mysqli_query($con,$sql2);
+while($row_1=mysqli_fetch_array($result_fac1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title_fac1'] =$row_1['fac_title'];
+		$_SESSION['li_1_fac'] =$row_1['fac_li_1'];
+		$_SESSION['li_2_fac'] =$row_1['fac_li_2'];
+		$_SESSION['li_3_fac'] =$row_1['fac_li_3'];
+		$_SESSION['li_4_fac'] =$row_1['fac_li_4'];
+		$_SESSION['li_5_fac'] =$row_1['fac_li_5'];
+	}
+
+$result_fac2=mysqli_query($con,$sql2);
+while($row_1=mysqli_fetch_array($result_fac2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title_fac2'] =$row_1['fac_title'];
+		$_SESSION['li_6_fac'] =$row_1['fac_li_1'];
+		$_SESSION['li_7_fac'] =$row_1['fac_li_2'];
+		$_SESSION['li_8_fac'] =$row_1['fac_li_3'];
+		$_SESSION['li_9_fac'] =$row_1['fac_li_4'];
+		$_SESSION['li_10_fac'] =$row_1['fac_li_5'];
+	}
+
+
+$result_t1=mysqli_query($con,$sql3);
+while($row_t1=mysqli_fetch_array($result_t1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['title_fac2'] =$row_1['fac_title'];
+		$_SESSION['li_6_fac'] =$row_1['fac_li_1'];
+		$_SESSION['li_7_fac'] =$row_1['fac_li_2'];
+		$_SESSION['li_8_fac'] =$row_1['fac_li_3'];
+		$_SESSION['li_9_fac'] =$row_1['fac_li_4'];
+		$_SESSION['li_10_fac'] =$row_1['fac_li_5'];
+	}
+
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -212,13 +252,13 @@ include("header.html");
 					<div class="col-md-3 w3-faculty-img1">
 					</div>
 					<div class="col-md-3 w3-faculty-data">
-						<h3>Faculty Experience</h3>
+						<h3><?php echo $_SESSION['title_fac1'] ?></h3>
 						 <ul>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Quality improvement</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Service effectiveness</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Vocational education</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Training efficiency</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Consultation services</li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_1_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_2_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_3_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_4_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_5_fac'] ?></li>
 						 </ul>
 					</div>
 					<div class="col-md-3 w3-faculty-ex-years">
@@ -239,13 +279,13 @@ include("header.html");
 						<p>more than 20 years of experience </p>
 				</div>
 				<div class="col-md-3 w3-faculty-data">
-						<h3>Female Faculty</h3>
+						<h3><?php echo $_SESSION['title_fac2']?></h3>
 						 <ul>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Someone who cares</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Not being alone</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Affirming one's worth</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Acts in best interest</li>
-							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span>Feeling of connection</li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_6_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_7_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_8_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_9_fac'] ?></li>
+							 <li><span><i class="fa fa-check" aria-hidden="true"></i></span><?php echo $_SESSION['li_10_fac'] ?></li>
 						 </ul>
 				</div>
 				<div class="col-md-3 w3-faculty-img4">
