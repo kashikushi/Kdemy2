@@ -87,18 +87,6 @@ while($row_1=mysqli_fetch_array($result_fac2))
 	}
 
 
-$result_t1=mysqli_query($con,$sql3);
-while($row_t1=mysqli_fetch_array($result_t1)) 
-	{
-		//$_SESSION['auth']=true;
-		$_SESSION['title_fac2'] =$row_1['fac_title'];
-		$_SESSION['li_6_fac'] =$row_1['fac_li_1'];
-		$_SESSION['li_7_fac'] =$row_1['fac_li_2'];
-		$_SESSION['li_8_fac'] =$row_1['fac_li_3'];
-		$_SESSION['li_9_fac'] =$row_1['fac_li_4'];
-		$_SESSION['li_10_fac'] =$row_1['fac_li_5'];
-	}
-
 
  ?>
 <!DOCTYPE html>
